@@ -6,4 +6,4 @@
 
 システム名：選手管理システム
 
-URL：
+URL：https://aso-2201011.namaste.jp/final/src/menu.php
