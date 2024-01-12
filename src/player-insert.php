@@ -1,3 +1,9 @@
+<?php
+require 'db-connect.php';
+$pdo=new PDO($connect,USER,PASS);
+    $sql=$pdo->query('select * from club');ß
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +20,14 @@
     <br>
     国籍：<input type="text" name="country-name">
     <br>
-    所属クラブ：<input type="text" name="club-name">
+    所属クラブ：
+    <select name="club-name">
+<?php
+    foreach($sql as $row){
+        echo '<option value="',$row['club_id'],'">',$row['club_name'];
+    }
+?>
+</select>
     <br>
     <button type="submit" name="action" value="send">登録</button>
 </form>
