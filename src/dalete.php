@@ -14,6 +14,8 @@ $pdo=new PDO($connect,USER,PASS);
 <body>
 <h2>選手削除</h2>
 <a href="menu.php">メニューに戻る</a>
+<a href="insert.php">選手を登録する</a>
+<a href="update.php">選手情報を更新する</a>
 <hr>
 <form action="player-delete-result.php" method="post">
     <button type="submit" name="delete-result">削除</button>

@@ -30,7 +30,7 @@ $pdo=new PDO($connect,USER,PASS);
 ?>
 </select>
     <br>
-    <button type="submit" name="action" value="send">登録</button>
+    <button type="submit" name="action" value="send">登録する</button>
 </form>
 </body>
 </html>

@@ -7,9 +7,9 @@
 </head>
 <body>
 <h1>プレミアリーグ選手管理メニュー</h1>
-        <a href="select.php"><button type="submit" name="select">一覧</button></a>
-        <a href="insert.php"><button type="submit" name="insert">登録</button></a>
-        <a href="update.php"><button type="submit" name="update">更新</button></a>
-        <a href="delete.php"><button type="submit" name="delete">削除</button></a>
+        <a href="select.php"><button type="submit" name="select">選手一覧を見る</button></a>
+        <a href="insert.php"><button type="submit" name="insert">選手を登録する</button></a>
+        <a href="update.php"><button type="submit" name="update">選手情報を更新</button></a>
+        <a href="delete.php"><button type="submit" name="delete">選手情報を削除</button></a>
 </body>
 </html>
