@@ -1,7 +1,7 @@
 <?php
 require 'db-connect.php';
 $pdo=new PDO($connect,USER,PASS);
-    $sql=$pdo->query('select * from club');
+    $sql=$pdo->query('select * from player');
 ?>
 
 <?php
