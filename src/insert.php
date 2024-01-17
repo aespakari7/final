@@ -16,12 +16,12 @@ $pdo=new PDO($connect,USER,PASS);
 <a href="menu.php">メニューに戻る</a>
 <hr>
 <form action="insert-output.php" method="post">
-    選手名：<input type="text" name="player-name">
+    選手名：<input type="text" name="player_name">
     <br>
-    国籍：<input type="text" name="country-name">
+    国籍：<input type="text" name="country_name">
     <br>
     所属クラブ：
-    <select name="club-name">
+    <select name="club_name">
 <?php
     foreach($sql as $row){
         echo '<option value="',$row['club_id'],'">',$row['club_name'];
