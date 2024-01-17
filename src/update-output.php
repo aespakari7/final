@@ -20,7 +20,7 @@ $pdo=new PDO($connect,USER,PASS);
 <hr>
 
 <?php
-$sql=$pdo->prepare('update player set values(?,?,?)');
+$sql=$pdo->prepare('update player set player_name=?, country_name=?,club_name=?');
 if($sql->execute([$_REQUEST['player_name'],$_REQUEST['country_name'],$_REQUEST['club_name']])){
     echo '更新しました。';
 }else{
