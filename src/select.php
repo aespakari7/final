@@ -19,7 +19,7 @@ $pdo=new PDO($connect,USER,PASS);
 <?php
     //チーム別に選手名を取得
     $query = "SELECT team, player_name FROM players";
-    $result = $conn->query($query);
+    $result = $pdo->query($query);
 
     // データが存在する場合に表示
     if ($result->num_rows > 0) {
