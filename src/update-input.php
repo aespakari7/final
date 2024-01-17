@@ -2,9 +2,9 @@
 require 'db-connect.php';
 $pdo=new PDO($connect,USER,PASS);
     $sql=$pdo->prepare('select * from player where player_name = ?');
-    $sql->execute([$_GET['player_name']]);
+    $sql->execute([$_GET['id']]);
     $row2 = $sql->fetch();
-    $sql=$pdo->prepare('select * from club');
+    $sql=$pdo->query('select * from club');
 ?>
 
 <!DOCTYPE html>
