@@ -18,19 +18,12 @@ $pdo=new PDO($connect,USER,PASS);
 <?php
     //チーム別に選手名を取得
     $query = "SELECT club_name, player_name FROM player";
-    $result = $pdo->query($query);
-
-    // データが存在する場合に表示
-    if ($result->num_rows > 0) {
-        echo "<h3>選手一覧</h3>";
-        echo "<ul>";
-        while ($row = $result->fetch_assoc()) {
-            echo "<li>" . $row["club_name"] . " - " . $row["player_name"] . "</li>";
-        }
-        echo "</ul>";
-    } else {
-        echo "選手が登録されていません";
-    }
+    echo "<h3>選手一覧</h3>";
+    echo "<ul>";
+    foreach($pdo->query($query) as $row){
+        echo "<li>" . $row["club_name"] . " - " . $row["player_name"] . "</li>";
+    };
+    echo "</ul>";
     ?>
     
 </body>
