@@ -16,7 +16,6 @@ $pdo=new PDO($connect,USER,PASS);
 <a href="menu.php">メニューに戻る</a>
 <a href="insert.php">選手を登録する</a>
 <a href="delete.php">選手情報を削除する</a>
-<a href="delete.php">もう一度選手情報を更新する</a>
 <hr>
 <form action="insert-output.php" method="post">
     選手名：<input type="text" name="player_name">
@@ -32,7 +31,7 @@ $pdo=new PDO($connect,USER,PASS);
 ?>
 </select>
     <br>
-    <button type="submit" name="action" value="send">登録する</button>
+    <button type="submit" name="action" value="send">更新する</button>
 </form>
 </body>
 </html>
