@@ -20,8 +20,8 @@ $pdo=new PDO($connect,USER,PASS);
 <hr>
 
 <?php
-$sql=$pdo->prepare('update player set player_name=?, country_name=?,club_name=?');
-if($sql->execute([$_REQUEST['player_name'],$_REQUEST['country_name'],$_REQUEST['club_name']])){
+$sql=$pdo->prepare('update player set player_name=?, country_name=?,club_name=? where player_name=');
+if($sql->execute([$_REQUEST['player_name'],$_REQUEST['country_name'],$_REQUEST['club_name'],$_REQUEST['player_name']])){
     echo '更新しました。';
 }else{
     echo '更新できませんでした。入力していない箇所があります。';
