@@ -1,9 +1,3 @@
-<?php
-require 'db-connect.php';
-$pdo=new PDO($connect,USER,PASS);
-    $sql=$pdo->query('select * from club');
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +9,7 @@ $pdo=new PDO($connect,USER,PASS);
 <h1>プレミアリーグ選手登録</h1>
 <a href="menu.php">メニューに戻る</a>
 <hr>
-<form action="" method="post">
+<form action="insert-output.php" method="post">
     選手名：<input type="text" name="player-name">
     <br>
     国籍：<input type="text" name="country-name">

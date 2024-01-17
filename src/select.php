@@ -30,8 +30,9 @@ $pdo=new PDO($connect,USER,PASS);
         }
         echo "</ul>";
     } else {
-        echo "データが存在しません";
+        echo "選手が登録されていません";
     }
     ?>
+    
 </body>
 </html>
