@@ -17,7 +17,7 @@ $pdo=new PDO($connect,USER,PASS);
 
 <?php
     //チーム別に選手名を取得
-    $query = "SELECT team, player_name FROM player";
+    $query = "SELECT club_name, player_name FROM player";
     $result = $pdo->query($query);
 
     // データが存在する場合に表示
@@ -25,7 +25,7 @@ $pdo=new PDO($connect,USER,PASS);
         echo "<h3>選手一覧</h3>";
         echo "<ul>";
         while ($row = $result->fetch_assoc()) {
-            echo "<li>" . $row["team"] . " - " . $row["player_name"] . "</li>";
+            echo "<li>" . $row["club_name"] . " - " . $row["player_name"] . "</li>";
         }
         echo "</ul>";
     } else {
