@@ -23,7 +23,7 @@ $pdo=new PDO($connect,USER,PASS);
 <form action="update-output.php" method="post">
     選手名：<input type="text" name="player_name" value="<?= $row2['player_name']?>">
     <br>
-    国籍：<input type="text" name="country_name" value="<?= $row2['country_name']?>>
+    国籍：<input type="text" name="country_name" value="<?= $row2['country_name']?>">
     <br>
     所属クラブ：
     <select name="club_name">
