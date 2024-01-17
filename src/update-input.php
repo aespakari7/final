@@ -17,7 +17,7 @@ $pdo=new PDO($connect,USER,PASS);
 <a href="insert.php">選手を登録する</a>
 <a href="delete.php">選手情報を削除する</a>
 <hr>
-<form action="insert-output.php" method="post">
+<form action="update-output.php" method="post">
     選手名：<input type="text" name="player_name">
     <br>
     国籍：<input type="text" name="country_name">
