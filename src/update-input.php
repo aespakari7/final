@@ -21,7 +21,7 @@ $pdo=new PDO($connect,USER,PASS);
 <a href="delete.php">選手情報を削除する</a>
 <hr>
 <form action="update-output.php" method="post">
-    選手名：<input type="text" disabled name="player_name" value="<?= $row2['player_name']?>">
+    選手名：<?= $row2['player_name']?><input type="hidden" name="player_name" value="<?= $row2['player_name']?>">
     <br>
     国籍：<input type="text" name="country_name" value="<?= $row2['country_name']?>">
     <br>
