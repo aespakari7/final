@@ -8,7 +8,5 @@
 <body>
 <h1>プレミアリーグ選手一覧</h1>
 <a href="menu.php">メニューに戻る</a>
-<hr>
-
-<p></p></body>
+</body>
 </html>
