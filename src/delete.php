@@ -18,8 +18,6 @@ $pdo=new PDO($connect,USER,PASS);
 <a href="update.php">選手情報を更新する</a>
 <hr>
 <form action="delete-output.php" method="post">
-    <button type="submit" name="update-result">削除する</button>
-
     <?php
     $query = "SELECT c.club_name club_name, player_name FROM player p , club c where p.club_name=c.club_id" ;
     echo "<ul>";
