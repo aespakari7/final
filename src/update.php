@@ -14,15 +14,14 @@
 <form action="update-output.php" method="post">
     <button type="submit" name="update-result">更新する</button>
 
-    <p>
-        <input type="radio" name="player_id" value=26>26 : j : j
-    </p>
-    <p>
-        <input type="radio" name="player_id" value=38>38 : ひとりごつ : かわだだいち
-    </p>
-    <p>
-        <input type="radio" name="player_id" value=39>39 : ｓ : ｓ
-    </p>
+    <?php
+    $query = "SELECT c.club_name club_name, player_name FROM player p , club c where p.club_name=c.club_id" ;
+    echo "<ul>";
+    foreach($pdo->query($query) as $row){
+        echo "<li>" . $row["club_name"] . " - " . $row["player_name"] . "</li>";
+    };
+    echo "</ul>";
+    ?>
 
 </form>
 </body>

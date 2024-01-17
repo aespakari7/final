@@ -19,7 +19,6 @@ $pdo=new PDO($connect,USER,PASS);
 <hr>
 
 <?php
-    //チーム別に選手名を取得
     $query = "SELECT c.club_name club_name, player_name FROM player p , club c where p.club_name=c.club_id" ;
     echo "<ul>";
     foreach($pdo->query($query) as $row){
