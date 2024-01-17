@@ -22,7 +22,7 @@ $pdo=new PDO($connect,USER,PASS);
     $query = "SELECT c.club_name club_name, player_name FROM player p , club c where p.club_name=c.club_id" ;
     echo "<ul>";
     foreach($pdo->query($query) as $row){
-        echo "<li>" . $row["club_name"] . " - " . $row["player_name"] . '　<a href="update-input.php?id=',$row["player_name"],'">削除</a></li>';
+        echo "<li>" . $row["club_name"] . " - " . $row["player_name"] . '　<a href="delete-input.php?id=',$row["player_name"],'">削除</a></li>';
     };
     echo "</ul>";
     ?>
