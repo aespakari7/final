@@ -1,0 +1,38 @@
+<?php
+require 'db-connect.php';
+$pdo=new PDO($connect,USER,PASS);
+    $sql=$pdo->query('select * from club');
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>選手情報の更新</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<h1>選手情報の更新</h1>
+<a href="menu.php">メニューに戻る</a>
+<a href="insert.php">選手を登録する</a>
+<a href="delete.php">選手情報を削除する</a>
+<a href="delete.php">もう一度選手情報を更新する</a>
+<hr>
+<form action="insert-output.php" method="post">
+    選手名：<input type="text" name="player_name">
+    <br>
+    国籍：<input type="text" name="country_name">
+    <br>
+    所属クラブ：
+    <select name="club_name">
+<?php
+    foreach($sql as $row){
+        echo '<option value="',$row['club_id'],'">',$row['club_name'];
+    }
+?>
+</select>
+    <br>
+    <button type="submit" name="action" value="send">登録する</button>
+</form>
+</body>
+</html>
