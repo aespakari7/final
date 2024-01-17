@@ -21,7 +21,7 @@ $pdo=new PDO($connect,USER,PASS);
 
 <?php
 $sql=$pdo->prepare('delete from player where player_name=?');
-if($sql->execute([$_REQUEST['player_name']])){
+if($sql->execute([$_REQUEST['id']])){
     echo '削除しました。';
 }
 ?>
