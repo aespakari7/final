@@ -1,7 +1,6 @@
 <?php
 require 'db-connect.php';
 $pdo=new PDO($connect,USER,PASS);
-    $sql=$pdo->query('select * from player');
 ?>
 
 <!DOCTYPE html>
@@ -21,8 +20,8 @@ $pdo=new PDO($connect,USER,PASS);
 <hr>
 
 <?php
-$sql=$pdo->prepare('update player set  country_name=?,club_name=? where player_name=?');
-if($sql->execute([$_REQUEST['country_name'],$_REQUEST['club_name'],$_REQUEST['player_name']])){
+$sql=$pdo->prepare('delete from player where player_name=?');
+if($sql->execute([$_REQUEST['player_name']])){
     echo '削除しました。';
 }
 ?>
