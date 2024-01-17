@@ -12,7 +12,7 @@ $pdo=new PDO($connect,USER,PASS);
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<h1>選手登録</h1>
+<h1>プレミアリーグ選手登録</h1>
 <a href="menu.php">メニューに戻る</a>
 <hr>
 <form action="" method="post">

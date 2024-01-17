@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<h1>選手管理メニュー</h1>
+<h1>プレミアリーグ選手選手管理メニュー</h1>
         <a href="player-select.php"><button type="submit" name="select">一覧</button></a>
         <a href="player-insert.php"><button type="submit" name="insert">登録</button></a>
         <a href="player-update.php"><button type="submit" name="update">更新</button></a>
