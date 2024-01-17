@@ -30,7 +30,7 @@ $pdo=new PDO($connect,USER,PASS);
 <?php
     foreach($sql as $row){
         $select ="";
-        if( $row2['club_id'] == $row['club_id']){
+        if( $row2['club_name'] == $row['club_id']){
             $select ="selected";
         }
         echo '<option value="',$row['club_id'],'" ',$select,'>',$row['club_name'];
