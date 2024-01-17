@@ -14,7 +14,8 @@ $pdo=new PDO($connect,USER,PASS);
 <body>
 <h1>プレミアリーグ選手登録</h1>
 <a href="menu.php">メニューに戻る</a>
-<a href="insert.php">登録画面に戻る</a>
+<a href="select.php">選手一覧を見る</a>
+<a href="insert.php">もう一度選手を登録する</a>
 <hr>
 
 <?php

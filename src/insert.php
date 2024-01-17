@@ -14,6 +14,7 @@ $pdo=new PDO($connect,USER,PASS);
 <body>
 <h1>プレミアリーグ選手登録</h1>
 <a href="menu.php">メニューに戻る</a>
+<a href="select.php">選手一覧を見る</a>
 <hr>
 <form action="insert-output.php" method="post">
     選手名：<input type="text" name="player_name">
