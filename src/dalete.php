@@ -8,11 +8,11 @@ $pdo=new PDO($connect,USER,PASS);
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>選手削除</title>
+    <title>選手情報削除</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<h2>選手削除</h2>
+<h2>選手情報の削除</h2>
 <a href="menu.php">メニューに戻る</a>
 <a href="insert.php">選手を登録する</a>
 <a href="update.php">選手情報を更新する</a>

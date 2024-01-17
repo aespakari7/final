@@ -11,7 +11,7 @@ $pdo=new PDO($connect,USER,PASS);
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<h1>プレミアリーグ選手一覧</h1>
+<h1>登録済みのプレミアリーグ選手一覧</h1>
 <a href="menu.php">メニューに戻る</a>
 <a href="insert.php">選手を登録する</a>
 <a href="update.php">選手情報を更新する</a>
