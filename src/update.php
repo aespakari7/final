@@ -27,7 +27,6 @@ $pdo=new PDO($connect,USER,PASS);
     };
     echo "</ul>";
     ?>
-
 </form>
 </body>
 </html>

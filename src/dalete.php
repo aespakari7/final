@@ -17,17 +17,16 @@ $pdo=new PDO($connect,USER,PASS);
 <a href="insert.php">選手を登録する</a>
 <a href="update.php">選手情報を更新する</a>
 <hr>
-<form action="player-delete-result.php" method="post">
-    <button type="submit" name="delete-result">削除</button>
-    <p>
-        <input type="checkbox" name="songarray[]" value=26>26 : j : j
-    </p>
-    <p>
-        <input type="checkbox" name="songarray[]" value=38>38 : ひとりごつ : かわだだいち
-    </p>
-    <p>
-        <input type="checkbox" name="songarray[]" value=39>39 : ｓ : ｓ
-    </p>
-</form>
+<form action="delete-output.php" method="post">
+    <button type="submit" name="update-result">削除する</button>
+
+    <?php
+    $query = "SELECT c.club_name club_name, player_name FROM player p , club c where p.club_name=c.club_id" ;
+    echo "<ul>";
+    foreach($pdo->query($query) as $row){
+        echo "<li>" . $row["club_name"] . " - " . $row["player_name"] . '　<a href="update-input.php?id=',$row["player_name"],'">削除</a></li>';
+    };
+    echo "</ul>";
+    ?>
 </body>
 </html>

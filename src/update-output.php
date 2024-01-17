@@ -14,6 +14,7 @@ $pdo=new PDO($connect,USER,PASS);
 <body>
 <h1>選手情報の更新</h1>
 <a href="menu.php">メニューに戻る</a>
+<a href="select.php">選手一覧をみる</a>
 <a href="insert.php">選手を登録する</a>
 <a href="delete.php">選手情報を削除する</a>
 <a href="delete.php">もう一度選手情報を更新する</a>
