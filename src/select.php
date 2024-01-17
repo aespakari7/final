@@ -1,7 +1,6 @@
 <?php
 require 'db-connect.php';
 $pdo=new PDO($connect,USER,PASS);
-    $sql=$pdo->query('select * from club');
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +17,7 @@ $pdo=new PDO($connect,USER,PASS);
 
 <?php
     //チーム別に選手名を取得
-    $query = "SELECT team, player_name FROM players";
+    $query = "SELECT team, player_name FROM player";
     $result = $pdo->query($query);
 
     // データが存在する場合に表示
