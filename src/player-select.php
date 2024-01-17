@@ -16,8 +16,8 @@ $pdo=new PDO($connect,USER,PASS);
 <a href="menu.php">メニューに戻る</a>
 <hr>
 
-    //チーム別に選手名を取得
 <?php
+    //チーム別に選手名を取得
     $query = "SELECT team, player_name FROM players";
     $result = $conn->query($query);
 
