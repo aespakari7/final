@@ -1,3 +1,8 @@
+<?php
+require 'db-connect.php';
+$pdo=new PDO($connect,USER,PASS);
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +23,7 @@
     $query = "SELECT c.club_name club_name, player_name FROM player p , club c where p.club_name=c.club_id" ;
     echo "<ul>";
     foreach($pdo->query($query) as $row){
-        echo "<li>" . $row["club_name"] . " - " . $row["player_name"] . "</li>";
+        echo "<li>" . $row["club_name"] . " - " . $row["player_name"] . '　<a href="update-input.php?id=',$row["player_name"],'">更新</a></li>';
     };
     echo "</ul>";
     ?>
