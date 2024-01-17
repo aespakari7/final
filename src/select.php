@@ -18,7 +18,6 @@ $pdo=new PDO($connect,USER,PASS);
 <?php
     //チーム別に選手名を取得
     $query = "SELECT c.club_name club_name, player_name FROM player p , club c where p.club_name=c.club_id" ;
-    echo "<h3>選手一覧</h3>";
     echo "<ul>";
     foreach($pdo->query($query) as $row){
         echo "<li>" . $row["club_name"] . " - " . $row["player_name"] . "</li>";
